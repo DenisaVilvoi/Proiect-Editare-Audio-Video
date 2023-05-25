@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Proiect
 {
-    public partial class FirstPage : Form
+    public partial class FormEditVideo : Form
     {
-        public FirstPage()
+        public FormEditVideo()
         {
             InitializeComponent();
-        }
-
-        private void EditVideo_Click(object sender, EventArgs e)
-        {
-            FormEditVideo formEditVideo= new FormEditVideo();
-            formEditVideo.ShowDialog();
         }
     }
 }
