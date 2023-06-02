@@ -12,9 +12,20 @@ namespace Proiect
 {
     public partial class FormEditVideo : Form
     {
+        Video video = new Video();
         public FormEditVideo()
         {
             InitializeComponent();
+        }
+
+        private void LoadVideo_Click(object sender, EventArgs e)
+        {
+            video.loadVideo(pictureBox1);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            video.playVideo();
         }
     }
 }
