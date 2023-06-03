@@ -8,10 +8,12 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection.Emit;
+using Emgu.CV.Structure;
+using System.Drawing;
 
 namespace Proiect
 {
-    internal class Video
+    internal class Video:EditFrame
     {
         int TotalFrame, FrameNo;
         double Fps;
@@ -19,6 +21,7 @@ namespace Proiect
         VideoCapture capture;
         PictureBox pictureBox;
         List <Mat> videoList= new List<Mat>();
+        EditFrame editframe=new EditFrame();
         public void loadVideo(PictureBox pictureBox)
         {
             this.pictureBox = pictureBox;
@@ -37,7 +40,7 @@ namespace Proiect
         }
         public void frameVideo()
         {
-            int frame = 0;
+            int frame = 2;
             while(frame < TotalFrame-1)
             {
                 Mat mat = new Mat();
@@ -51,7 +54,7 @@ namespace Proiect
         {
 
             Mat m = new Mat();
-            while ( FrameNo < TotalFrame-1)
+            while ( FrameNo < videoList.Count-1)
             {
                
                 pictureBox.Image = videoList[FrameNo].ToBitmap();
@@ -69,6 +72,51 @@ namespace Proiect
             }
             
             ReadAllFrames();
+        }
+        public void grayScale()
+        {
+            for(int i=0; i < videoList.Count-1; i++)
+            {
+             videoList[i] = grayscale(videoList[i].ToBitmap().ToImage<Bgr, byte>()).Mat;
+            }
+        }
+        public void extract(Bgr color)
+        {
+            for (int i = 0; i < videoList.Count - 1; i++)
+            {
+                videoList[i] = extractColor(videoList[i].ToBitmap().ToImage<Bgr, byte>(),color).Mat;
+            }
+        }
+        public void carousel()
+        {
+            for (int i = 0; i < videoList.Count - 1; i++)
+            {
+                if (i > videoList.Count - 1) { break; }
+                videoList[i] = grayscale(videoList[i].ToBitmap().ToImage<Bgr, byte>()).Mat;
+                i++;
+                if(i>videoList.Count - 1) { break; }
+                videoList[i] = extractColor(videoList[i].ToBitmap().ToImage<Bgr, byte>(), new Bgr(0,0,255)).Mat;
+                i++;
+                if (i > videoList.Count - 1) { break; }
+                videoList[i] = extractColor(videoList[i].ToBitmap().ToImage<Bgr, byte>(), new Bgr(0, 255, 0)).Mat;
+                i++;
+                if (i > videoList.Count - 1) { break; }
+                videoList[i] = extractColor(videoList[i].ToBitmap().ToImage<Bgr, byte>(), new Bgr(255, 0, 0)).Mat;
+            }
+        }
+        public void gammaCorection(TextBox textbox)
+        {
+            for (int i = 0; i < videoList.Count - 1; i++)
+            {
+                videoList[i] = gamma(videoList[i].ToBitmap().ToImage<Bgr, byte>(), textbox).Mat;
+            }
+        }
+        public void brightnessVideo(TextBox alpha,TextBox beta)
+        {
+            for (int i = 0; i < videoList.Count - 1; i++)
+            {
+                videoList[i] = brightness(videoList[i].ToBitmap().ToImage<Bgr, byte>(), alpha,beta).Mat;
+            }
         }
     }
 }
