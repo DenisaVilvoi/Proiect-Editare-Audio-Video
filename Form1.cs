@@ -22,5 +22,11 @@ namespace Proiect
             FormEditVideo formEditVideo= new FormEditVideo();
             formEditVideo.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormAudio formAudio = new FormAudio();
+            formAudio.ShowDialog();
+        }
     }
 }
