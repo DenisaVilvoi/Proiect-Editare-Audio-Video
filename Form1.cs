@@ -28,5 +28,10 @@ namespace Proiect
             FormAudio formAudio = new FormAudio();
             formAudio.ShowDialog();
         }
+
+        private void FirstPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -40,12 +40,12 @@
             this.bLUEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carouselToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gammaCorectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.inputToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.applyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.brightnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alphaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.applyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -103,12 +103,12 @@
             this.gammaCorectionToolStripMenuItem,
             this.brightnessToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 152);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(199, 124);
             // 
             // grayscaleToolStripMenuItem
             // 
             this.grayscaleToolStripMenuItem.Name = "grayscaleToolStripMenuItem";
-            this.grayscaleToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.grayscaleToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
             this.grayscaleToolStripMenuItem.Text = "Grayscale";
             this.grayscaleToolStripMenuItem.Click += new System.EventHandler(this.grayscaleToolStripMenuItem_Click);
             // 
@@ -119,34 +119,34 @@
             this.gREENToolStripMenuItem,
             this.bLUEToolStripMenuItem});
             this.extractToolStripMenuItem.Name = "extractToolStripMenuItem";
-            this.extractToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.extractToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
             this.extractToolStripMenuItem.Text = "Extract";
             // 
             // rEDToolStripMenuItem
             // 
             this.rEDToolStripMenuItem.Name = "rEDToolStripMenuItem";
-            this.rEDToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.rEDToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
             this.rEDToolStripMenuItem.Text = "RED";
             this.rEDToolStripMenuItem.Click += new System.EventHandler(this.rEDToolStripMenuItem_Click);
             // 
             // gREENToolStripMenuItem
             // 
             this.gREENToolStripMenuItem.Name = "gREENToolStripMenuItem";
-            this.gREENToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gREENToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
             this.gREENToolStripMenuItem.Text = "GREEN";
             this.gREENToolStripMenuItem.Click += new System.EventHandler(this.gREENToolStripMenuItem_Click);
             // 
             // bLUEToolStripMenuItem
             // 
             this.bLUEToolStripMenuItem.Name = "bLUEToolStripMenuItem";
-            this.bLUEToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.bLUEToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
             this.bLUEToolStripMenuItem.Text = "BLUE";
             this.bLUEToolStripMenuItem.Click += new System.EventHandler(this.bLUEToolStripMenuItem_Click);
             // 
             // carouselToolStripMenuItem
             // 
             this.carouselToolStripMenuItem.Name = "carouselToolStripMenuItem";
-            this.carouselToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.carouselToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
             this.carouselToolStripMenuItem.Text = "Carousel";
             this.carouselToolStripMenuItem.Click += new System.EventHandler(this.carouselToolStripMenuItem_Click);
             // 
@@ -156,28 +156,20 @@
             this.inputToolStripMenuItem,
             this.applyToolStripMenuItem});
             this.gammaCorectionToolStripMenuItem.Name = "gammaCorectionToolStripMenuItem";
-            this.gammaCorectionToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.gammaCorectionToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
             this.gammaCorectionToolStripMenuItem.Text = "Gamma Corection";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(155, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(50, 22);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Visible = false;
             // 
             // inputToolStripMenuItem
             // 
             this.inputToolStripMenuItem.Name = "inputToolStripMenuItem";
-            this.inputToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.inputToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
             this.inputToolStripMenuItem.Text = "Input";
             this.inputToolStripMenuItem.Click += new System.EventHandler(this.inputToolStripMenuItem_Click);
             // 
             // applyToolStripMenuItem
             // 
             this.applyToolStripMenuItem.Name = "applyToolStripMenuItem";
-            this.applyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.applyToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
             this.applyToolStripMenuItem.Text = "Apply";
             this.applyToolStripMenuItem.Click += new System.EventHandler(this.applyToolStripMenuItem_Click);
             // 
@@ -187,22 +179,30 @@
             this.alphaToolStripMenuItem,
             this.applyToolStripMenuItem1});
             this.brightnessToolStripMenuItem.Name = "brightnessToolStripMenuItem";
-            this.brightnessToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.brightnessToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
             this.brightnessToolStripMenuItem.Text = "Brightness";
             // 
             // alphaToolStripMenuItem
             // 
             this.alphaToolStripMenuItem.Name = "alphaToolStripMenuItem";
-            this.alphaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.alphaToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
             this.alphaToolStripMenuItem.Text = "Alpha Beta";
             this.alphaToolStripMenuItem.Click += new System.EventHandler(this.alphaToolStripMenuItem_Click);
             // 
             // applyToolStripMenuItem1
             // 
             this.applyToolStripMenuItem1.Name = "applyToolStripMenuItem1";
-            this.applyToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.applyToolStripMenuItem1.Size = new System.Drawing.Size(165, 26);
             this.applyToolStripMenuItem1.Text = "Apply";
             this.applyToolStripMenuItem1.Click += new System.EventHandler(this.applyToolStripMenuItem1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(155, 81);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(50, 22);
+            this.textBox1.TabIndex = 4;
+            this.textBox1.Visible = false;
             // 
             // textBox2
             // 
@@ -236,6 +236,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Proiect.Properties.Resources.first_page;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1082, 603);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

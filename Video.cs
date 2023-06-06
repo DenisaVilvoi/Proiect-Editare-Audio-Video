@@ -21,6 +21,7 @@ namespace Proiect
         VideoCapture capture;
         PictureBox pictureBox;
         List <Mat> videoList= new List<Mat>();
+        List<Mat> backUpList = new List<Mat>();
         EditFrame editframe=new EditFrame();
         public void loadVideo(PictureBox pictureBox)
         {
@@ -46,6 +47,18 @@ namespace Proiect
                 Mat mat = new Mat();
                 this.capture.Read(mat); //capture e un fel de stiva in care punem mat-uri
                 this.videoList.Add(mat);
+                frame++;
+            }
+            backUpList.AddRange(videoList);
+        }
+        public void backUp()
+        {
+            videoList.Clear();
+            int frame = 0;
+            while (frame < TotalFrame - 3)
+            {
+
+                this.videoList.Add(backUpList[frame]);
                 frame++;
             }
         }
@@ -75,6 +88,7 @@ namespace Proiect
         }
         public void grayScale()
         {
+            backUp();
             for(int i=0; i < videoList.Count-1; i++)
             {
              videoList[i] = grayscale(videoList[i].ToBitmap().ToImage<Bgr, byte>()).Mat;
@@ -82,6 +96,7 @@ namespace Proiect
         }
         public void extract(Bgr color)
         {
+            backUp();
             for (int i = 0; i < videoList.Count - 1; i++)
             {
                 videoList[i] = extractColor(videoList[i].ToBitmap().ToImage<Bgr, byte>(),color).Mat;
@@ -89,6 +104,7 @@ namespace Proiect
         }
         public void carousel()
         {
+            backUp();
             for (int i = 0; i < videoList.Count - 1; i++)
             {
                 if (i > videoList.Count - 1) { break; }
@@ -106,6 +122,7 @@ namespace Proiect
         }
         public void gammaCorection(TextBox textbox)
         {
+            backUp();
             for (int i = 0; i < videoList.Count - 1; i++)
             {
                 videoList[i] = gamma(videoList[i].ToBitmap().ToImage<Bgr, byte>(), textbox).Mat;
@@ -113,6 +130,7 @@ namespace Proiect
         }
         public void brightnessVideo(TextBox alpha,TextBox beta)
         {
+            backUp();
             for (int i = 0; i < videoList.Count - 1; i++)
             {
                 videoList[i] = brightness(videoList[i].ToBitmap().ToImage<Bgr, byte>(), alpha,beta).Mat;
